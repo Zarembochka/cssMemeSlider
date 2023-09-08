@@ -39,11 +39,19 @@ h1 {
 }
 
 .slider__cirkle {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
+    /* width: 1.7vmin;
+    height: 1.7vmin;
+    border-radius: 50%; */
     cursor: pointer;
+    /* border: 0.125rem solid rgb(71, 130, 219);
+    background-color: rgb(71, 130, 219); */
+    padding: 5px;
+}
+
+.dot {
+    width: 1.7vmin;
+    height: 1.7vmin;
+    border-radius: 50%;
     border: 0.125rem solid rgb(71, 130, 219);
     background-color: rgb(71, 130, 219);
 }
@@ -72,15 +80,6 @@ h1 {
     width: 100%;
 }
 
-.slider__cirkle {
-    width: 1.7vmin;
-    height: 1.7vmin;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 0.125rem solid rgb(71, 130, 219);
-    background-color: rgb(71, 130, 219);
-}
-
 .slider__text {
     width: 91%;
     overflow-x: hidden;
@@ -102,22 +101,22 @@ span {
     color: white;
 }
 
-#slide1:checked ~ .slider__footer .slider__pagination label[for=slide1] {
+#slide1:checked ~ .slider__footer .slider__pagination label[for=slide1] .dot {
     background-color: transparent;
     transition: all 0.2s ease;
 }
 
-#slide2:checked ~ .slider__footer .slider__pagination label[for=slide2] {
+#slide2:checked ~ .slider__footer .slider__pagination label[for=slide2] .dot {
     background-color: transparent;
     transition: all 0.2s ease;
 }
 
-#slide3:checked ~ .slider__footer .slider__pagination label[for=slide3] {
+#slide3:checked ~ .slider__footer .slider__pagination label[for=slide3] .dot {
     background-color: transparent;
     transition: all 0.2s ease;
 }
 
-#slide4:checked ~ .slider__footer .slider__pagination label[for=slide4] {
+#slide4:checked ~ .slider__footer .slider__pagination label[for=slide4] .dot {
     background-color: transparent;
     transition: all 0.2s ease;
 }
@@ -180,10 +179,14 @@ span {
     justify-content: space-between;
 }
 
+.slider__pagination {
+    display: flex;
+}
+
 /* =====media===== */
 
 @media (hover: hover) {
-    .slider__pagination label:hover {
+    .slider__pagination label:hover .dot {
         background-color: rgb(255, 255, 255);
         border: 0.125rem solid rgb(255, 255, 255);
         transition: all 0.2s ease;
