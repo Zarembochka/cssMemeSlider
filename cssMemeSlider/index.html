@@ -12,22 +12,35 @@
         <header>
             <h1>Mem slider</h1>
         </header>
-         <div class="slider">
-            <div class="slider__images">
-                <img class="slider__image" src="./images/1.png" alt="mem about javascript">
+         <div class="slider__inner">
+            <input type="radio" name="circkle" id="slide1" checked>
+            <input type="radio" name="circkle" id="slide2">
+            <input type="radio" name="circkle" id="slide3">
+            <input type="radio" name="circkle" id="slide4">
+            <div class="slider">
+                <ul>
+                    <li class="image1">
+                        <img class="slider__image" src="./images/1.jpg" alt="mem about specification"> 
+                    </li>
+                    <li class="image2">
+                        <img class="slider__image" src="./images/2.jpg" alt="mem about javascript">
+                    </li>
+                    <li class="image3">
+                        <img class="slider__image" src="./images/1.jpg" alt="mem about javascript">
+                    </li>
+                    <li class="image4">
+                        <img class="slider__image" src="./images/2.jpg" alt="mem about javascript">
+                    </li>
+                </ul>
             </div>
             <footer class="slider__footer">
-                <span class="slider__text">
-                    Какую температуру котла Вы считаете оптимальной?
-                </span>
+                <div class="slider__text">
+
+                </div>
                 <div class="slider__pagination">
-                    <input type="radio" name="circkle" id="slide1" checked>
                     <label class="slider__cirkle" for="slide1"></label>
-                    <input type="radio" name="circkle" id="slide2">
                     <label class="slider__cirkle" for="slide2"></label>
-                    <input type="radio" name="circkle" id="slide3">
                     <label class="slider__cirkle" for="slide3"></label>
-                    <input type="radio" name="circkle" id="slide4">
                     <label class="slider__cirkle" for="slide4"></label>
                 </div>
             </footer>
