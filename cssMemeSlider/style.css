@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 64rem;
     max-height: 100vh;
     margin: 0 auto;
     background-color: black;
@@ -44,7 +44,7 @@ h1 {
     height: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid rgb(71, 130, 219);
+    border: 0.125rem solid rgb(71, 130, 219);
     background-color: rgb(71, 130, 219);
 }
 
@@ -77,7 +77,7 @@ h1 {
     height: 1.7vmin;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid rgb(71, 130, 219);
+    border: 0.125rem solid rgb(71, 130, 219);
     background-color: rgb(71, 130, 219);
 }
 
@@ -185,7 +185,7 @@ span {
 @media (hover: hover) {
     .slider__pagination label:hover {
         background-color: rgb(255, 255, 255);
-        border: 2px solid rgb(255, 255, 255);
+        border: 0.125rem solid rgb(255, 255, 255);
         transition: all 0.2s ease;
     }
 }
