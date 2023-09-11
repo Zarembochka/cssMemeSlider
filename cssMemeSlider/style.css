@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 64rem;
+    max-height: 100vh;
+    margin: 0 auto;
+    background-color: black;
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 1em 2em;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.slider__inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.slider__inner input {
+    display: none;
+}
+
+.slider__cirkle {
+    cursor: pointer;
+    padding: 0.3125rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.125rem solid rgb(71, 130, 219);
+    background-color: rgb(71, 130, 219);
+}
+
+.slider {
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    border-radius: 1vmin;
+}
+
+.slider  ul {
+    list-style: none;
+    width: 400%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.slider  ul li {
+    display: flex;
+    width: 100%;
+}
+
+.slider__image {
+    width: 100%;
+}
+
+.slider__text {
+    width: 75%;
+    overflow: hidden;
+}
+
+.slider__text ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: calc(400% + 1.875rem);
+    column-gap: 0.625rem;
+}
+
+.slider__text ul li {
+    width: 100%;
+    display: block;
+}
+
+span {
+    color: white;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#slide1:checked ~ .slider__footer .slider__pagination label[for=slide1] .dot {
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#slide2:checked ~ .slider__footer .slider__pagination label[for=slide2] .dot {
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#slide3:checked ~ .slider__footer .slider__pagination label[for=slide3] .dot {
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#slide4:checked ~ .slider__footer .slider__pagination label[for=slide4] .dot {
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#slide1:checked ~ .slider > ul {
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+#slide1:checked ~ .slider__footer .slider__text > ul {
+    transform: translateX(0);
+}
+
+#slide1:checked ~ .slider__footer .slider__text > ul > .text1 {
+    animation: fadein 1s ease-in-out;
+}
+
+#slide2:checked ~ .slider > ul {
+    transform: translateX(-25%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#slide2:checked ~ .slider__footer .slider__text > ul {
+    transform: translateX(-25%) translateX(-0.2rem);
+}
+
+#slide2:checked ~ .slider__footer .slider__text > ul > .text2 {
+    animation: fadein 1s ease-in-out;
+}
+
+#slide3:checked ~ .slider > ul {
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in;
+}
+
+#slide3:checked ~ .slider__footer .slider__text > ul {
+    transform: translateX(-50%) translateX(-0.28rem);
+}
+
+#slide3:checked ~ .slider__footer .slider__text > ul > .text3 {
+    animation: fadein 1s ease-in-out;
+}
+
+#slide4:checked ~ .slider > ul {
+    transform: translateX(-75%);
+    transition: transform 0.5s ease-in;
+}
+
+#slide4:checked ~ .slider__footer .slider__text > ul {
+    transform: translateX(-75%) translateX(-0.4rem);;
+}
+
+#slide4:checked ~ .slider__footer .slider__text > ul > .text4 {
+    animation: fadein 1s ease-in-out;
+}
+
+.slider__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__pagination {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =====media===== */
+
+@media (hover: hover) {
+    .slider__pagination label:hover .dot {
+        background-color: rgb(255, 255, 255);
+        border: 0.125rem solid rgb(255, 255, 255);
+        transition: all 0.2s ease;
+    }
+
+    .slider__pagination label:active .dot {
+        outline: 0.125rem solid rgb(71, 130, 219);
+        transition: outline 0.2s ease; 
+    }
+}
+
+@media (max-width: 44rem) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .slider__footer {
+        flex-direction: column-reverse;
+        row-gap: 1rem;
+        justify-content: center;
+    }
+
+    .slider__text {
+        width: 100%;
+    }
+
+    span {
+        /* font-size: 0.75rem; */
+        white-space: normal;
+    }
+
+    .slider__pagination {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== keyframes ===== */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
